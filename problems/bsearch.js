@@ -2,8 +2,9 @@
 While you are working on the following problems, it DEFINITELY HELPS to
 visualize these things in action, so use the below arrays as example inputs.
 
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const oddNums = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+const evenNums = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+const empty = [];
 *******************************************************************/
 
 
@@ -48,7 +49,7 @@ const iterBSearch = (nums, targetNum) => {
   // values to be searched
 
   // reassign the midIdx to the the middle of the new lower and upper indices
-  // Hint: This is the difference between lower and upper, divided by 2
+  // Hint: This is the sum of lower and upper, divided by 2
 
   // if targetNum is larger than the value in the middle, we know targetNum is
   // not between the current lower and current middle, so reassign the lowerIdx
@@ -105,7 +106,7 @@ const recurBSearchIdxV2 = (nums, targetNum, low = null, hi = null) => {
   if low is equal to high and we haven't found targetNum, then return -1 to
   indicate that the value was not found.
   
-  Determine the slice point (the difference between low and hi, divided by 2)
+  Determine the slice point (the sum of low and hi, divided by 2)
 
   If targetNum is less than nums[slicepoint], then
   return the binary search of nums where low is the beginning of the array, and
